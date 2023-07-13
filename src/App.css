@@ -1,7 +1,16 @@
 .body{border: 2px solid black;
-  box-sizing: border-box;
-background-color:beige;
+ background-color:beige;
 padding: 16px;
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+overflow: scroll;
+box-sizing: border-box;
+
+
 }
 table, th, td{border:1px solid black;
 border-collapse:collapse;
@@ -19,14 +28,21 @@ p,li{
   font-family: cursive;
 }
 
+.mail{
+  font-size: 20px;
+}
+
+.res{
+  display: none;
+}
 aside{
   float: left;
   max-width: 25%;
-  height: 780px;
+  height: fit-content;
   background-color: rgb(207, 200, 200);
-  margin-right: 16px;
-  margin-bottom: 16PX;
+  margin-right: 16PX;
   padding: 16px;
+  box-sizing: border-box;
 }
 h1#nam{
   font-size: 40px;
@@ -85,3 +101,43 @@ h1#res{
               'GRAD' 0,
                'opsz' 48
                   } 
+
+  .dateplace{
+    display: inline;
+    margin-right:50px ;
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+     
+      aside{
+        float: none;
+       max-width: 100%;
+     height: fit-content;
+        box-sizing: border-box;
+       margin-bottom: 16px;
+       margin-right: 0;
+      }
+      .res{
+        display: block;
+        text-align: center;
+      }
+      #res{
+        display: none;
+       
+      }
+
+      fieldset{
+        width: 100%;
+        box-sizing: border-box;
+      }
+      table,tr,th{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .dateplace{
+        display: block;
+      }
+  }
